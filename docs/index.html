@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Erste Schritte mit dem Modern Client 2.0</title>
   <style>
     body {
@@ -11,27 +12,68 @@
       background-color: #f9f9f9;
       color: #333;
     }
+
     h1, h2 {
       color: #004a99;
     }
-    ul {
-      list-style-type: disc;
+
+    ul, ol {
       margin-left: 20px;
     }
-    ol {
-      margin-left: 20px;
-    }
+
     .important {
       background-color: #fff3cd;
       border-left: 6px solid #ffeeba;
       padding: 10px;
       margin: 15px 0;
     }
+
     .tip {
       background-color: #d1ecf1;
       border-left: 6px solid #bee5eb;
       padding: 10px;
       margin: 15px 0;
+    }
+
+    .highlight-box {
+      background-color: #f8d7da;
+      border-left: 6px solid #dc3545;
+      padding: 15px;
+      margin: 30px 0;
+    }
+
+    .highlight-box h3 {
+      margin-top: 0;
+      color: #721c24;
+    }
+
+    /* ===== Responsive Design für Mobilgeräte ===== */
+    @media (max-width: 600px) {
+      body {
+        margin: 15px;
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+
+      .highlight-box, .important, .tip {
+        font-size: 0.95em;
+        padding: 12px;
+      }
+
+      ul, ol {
+        margin-left: 15px;
+      }
+
+      a {
+        word-break: break-all;
+      }
     }
   </style>
 </head>
@@ -78,13 +120,6 @@
         <li>USB-Funkempfänger: Funktionieren in der Regel direkt nach dem Einstecken.</li>
       </ul>
     </li>
-  </ol>
-
-  <div class="important">
-    <strong>Wichtig:</strong> Es kann ein Hinweis erscheinen, die Software „Logitech Options+“ zu installieren. Bitte <strong>nicht</strong> installieren – klicke auf „Abbrechen“. Falls benötigt, installiere sie später über das Unternehmensportal.
-  </div>
-
-  <ol start="4">
     <li>
       <strong>Microsoft Store aus der Taskleiste entfernen</strong><br>
       In unserer Umgebung ist der Store nicht aktiv. Bitte entferne das Symbol wie folgt:<br>
@@ -119,11 +154,14 @@
       </ul>
       <p>Dort kannst du erste Programme installieren – manche erscheinen ggf. mit kurzer Verzögerung.</p>
     </li>
-    <li>
-      <strong>Einrichtung von Windows Hello für Unternehmen</strong><br>
-      Kurz nach dem Neustart wirst du aufgefordert, "Windows Hello for Business" einzurichten. Dafür benötigst du MFA (Multi-Faktor-Authentifizierung), vorzugsweise über die Smartphone-App „Microsoft Authenticator“. Alternativ kann eine SMS mit einem einmaligen Code gesendet werden.
-    </li>
   </ol>
+
+  <div class="highlight-box">
+    <h3>⚠ Einrichtung von Windows Hello für Unternehmen</h3>
+    <p>Kurz nach dem Neustart deines Geräts wirst du aufgefordert, <strong>„Windows Hello for Business“</strong> einzurichten.</p>
+    <p>Dafür benötigst du eine <strong>MFA (Multi-Faktor-Authentifizierung)</strong> – am besten über die <strong>Microsoft Authenticator App</strong> auf deinem Smartphone (in allen App Stores verfügbar).</p>
+    <p>Alternativ kann auch eine SMS mit einem einmaligen Code an eine Nummer deiner Wahl gesendet werden.</p>
+  </div>
 
 </body>
 </html>
